@@ -69,7 +69,6 @@ function getSummary(character) {
   }
 }
 
-
 /**
  * ### Challenge `getVehiclesCostInCreditsSumTotal`
  * MVP Challenge 🤓
@@ -86,18 +85,20 @@ function getVehiclesCostInCreditsSumTotal(character) {
   });
   return total;
 
-/**
- * ### Challenge `getStarshipPassengerAndCrewSumTotal`
- * MVP Challenge 🤓
- *
- * @instructions
- * Sum the number of crew and passenger spots for all starships defined on the
- * input character.
- *
- * Sample data expected output: 27
- */
-function getStarshipPassengerAndCrewSumTotal(character) {
-  // TODO: Add your code here.
+  /**
+   * ### Challenge `getStarshipPassengerAndCrewSumTotal`
+   * MVP Challenge 🤓
+   *
+   * @instructions
+   * Sum the number of crew and passenger spots for all starships defined on the
+   * input character.
+   *
+   * Sample data expected output: 27
+   */
+  const all = character.reduce(function (accumulator, item) {
+    return accumulator + item.passenger + item.crew;
+  });
+  return all;
 }
 
 /**
